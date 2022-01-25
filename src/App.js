@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Tasks from "./features/tasks/TasksPage";
+import Task from "./features/tasks/TaskPage";
+import Author from "./features/author/Author";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { 
+  HashRouter, 
+  Switch, 
+  Route, 
+  Redirect 
+} from "react-router-dom";
+import { toAuthor, toTask, toTasks } from "./routes";
+import Navigation from "./Navigation";
 
-export default App;
+export default () => (
+  <HashRouter>
+    <Navigation />
+    
+      <Switch>
+        <Route path={toTask()}>
+          <Task />
+        </Route>
+        <Route path={toTasks()}>
+          <Tasks />
+        </Route>
+        <Route path={toAuthor()}>
+          <Author />
+        </Route>
+        <Route>
+          <Redirect to={toTasks()} />
+        </Route>
+      </Switch>
+  </HashRouter>
+);

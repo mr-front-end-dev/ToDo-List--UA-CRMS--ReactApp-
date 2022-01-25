@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Ознайомитись з останньою версією React.js",
+    "done": false,
+    "id": "wKfMkF1p2mC53q3A1F0xk"
+  },
+  {
+    "content": "Зробити проект за допомогою React.js",
+    "done": false,
+    "id": "DKG7233vXkB93dalOip4Z"
+  },
+  {
+    "content": "Написати вірш англійською мовою",
+    "done": true,
+    "id": "6TSNroi0kJ7uzFV6mkVX5"
+  },
+  {
+    "content": "Виконати тести продуктивності веб-аплікації",
+    "done": false,
+    "id": "GQQU1Daz_o-DOjDAWC_tb"
+  }
+]
